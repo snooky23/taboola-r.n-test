@@ -1,0 +1,26 @@
+{
+  "name": "@taboola/react-native-taboola-applicaster",
+  "version": "1.2.6",
+  "description": "React-Native plugin for Taboola SDK _ version for applicaster",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "",
+  "license": "ISC",
+  "peerDependencies": {
+    "react-native": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taboola/mobile-react-plugin.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taboola/mobile-react-plugin/issues"
+  },
+  "homepage": "https://github.com/taboola/mobile-react-plugin#readme"
+}
+

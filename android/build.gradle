@@ -1,0 +1,53 @@
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion "28.0.3"
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 25 //set to 25 because that's what the native android E! app is using in production.
+        versionCode 1
+        versionName "1.0"
+        consumerProguardFiles "proguard-rules.pro"
+    }
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            manifest.srcFile './src/main/AndroidManifest.xml'
+            java.srcDirs = ['./src/main/java']
+            jniLibs.srcDirs = ['libs']
+            res.srcDirs = ['./src/main/res']
+        }
+    }
+
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+              compileOnly 'com.applicaster:react-native:0.59.10'
+              implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+
+              implementation fileTree(dir: 'libs', include: '*.jar')
+              implementation 'com.taboola:android-sdk:2.3.6'
+              implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+              implementation 'com.android.support:customtabs:27.0.2'
+}
+
